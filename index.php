@@ -1,6 +1,10 @@
 <?php
   // Call component.php to use component in it 
   require_once("../library/php/component.php");
+  // Call DB Function
+  require_once("../library/php/db.php");
+  // Created DB
+  CreateDB();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +22,7 @@
 </head>
 <body>
   <!-- Main Container -->
-  <div class="container">
+  <div class="m-container">
     <!-- Navbar -->
     <div class="d-flex justify-content-center bg-dark pt-2 pb-2">
       <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
@@ -51,30 +55,35 @@
         <div class="d-flex justify-content-center container-5 col-12">
           <?php buttonElement("add_btn","btn btn-dark mx-2 mt-3 col-2 bg-success", "bi bi-plus-lg") ?>
           <?php buttonElement("update_btn","btn btn-dark mx-2 mt-3 col-2 bg-dark", "bi bi-arrow-clockwise") ?>
-          <?php buttonElement("edit_btn","btn btn-dark mx-2 mt-3 col-2 bg-primary", "bi bi-pencil-square") ?>
+          <?php buttonElement("edit_btn","btn btn-dark mx-2 mt-3 col-2 bg-primary", "bi bi-pen") ?>
           <?php buttonElement("delete_btn","btn btn-dark mx-2 mt-3 col-2 bg-danger", "bi bi-trash3") ?>
         </div>
       </form>
     </div>
-    <!-- Data Table -->
-    <table class="table">
-      <thead class="table-dark">
-        <tr>
-          <th>#</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td></td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <th>#</th>
-        </tr>
-      </tfoot>
-    </table>
-    <footer class="d-flex justify-content-center bg-dark text-white fixed-bottom mx-5">&copy 2022 muizshukri</footer>
+    <div class="container">
+      <!-- Data Table -->
+      <table class="table">
+        <thead class="table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Book Name</th>
+            <th>Publisher</th>
+            <th>Book Price</th>
+            <th>Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Code for dummies</td>
+            <td>Telaga Biru Sdn Bhd</td>
+            <td>50.99</td>
+            <td><button type="button" class="btn btn-primary"><i class="bi bi-pencil-square"></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <footer class="py-4 d-flex justify-content-center bg-dark text-white fixed-bottom">&copy 2022 muizshukri</footer>
     <!-- Footer -->
   </div>
   <?php footerElement() ?>
