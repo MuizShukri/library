@@ -56,6 +56,24 @@
         </div>
       </form>
     </div>
+    <!-- Data Table -->
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th>#</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>#</th>
+        </tr>
+      </tfoot>
+    </table>
     <footer class="d-flex justify-content-center bg-dark text-white fixed-bottom mx-5">&copy 2022 muizshukri</footer>
     <!-- Footer -->
   </div>
